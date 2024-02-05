@@ -1,0 +1,95 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.flex1 {
+    flex: 1;
+  }
+.flex2 {
+    flex: 2;
+  }
+.flex3 {
+    flex: 3;
+  }
+.flex4 {
+    flex: 4;
+  }
+  
+  /*Conseguimos que los contenedores con esta clase no colapsen*/
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+
+  /*se divide el espacio en columnas*/
+.flex-containernw{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+img{
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: orange;
+    margin: 10px;
+    box-shadow: 5px 5px 5px grey;
+}
+#tiradas{
+  justify-content: center;
+}
+
+#tiradas img:hover{
+  transition: 0.5s;
+  transform: scale(1.1);
+  
+}
+
+#juego{
+  justify-content: center;
+}
+body{
+  margin-top: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  margin-bottom: 250px;
+  border: 1px black solid;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  text-align: center;
+}
+html{
+  background: rgb(0,0,0);
+  background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(252,176,69,1) 43%);
+}
+.contenedor{
+    text-align: center;
+    justify-content: center;
+}
+
+#resultado{
+    font-weight: bold;
+    margin: 5%;
+}
+
+
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}

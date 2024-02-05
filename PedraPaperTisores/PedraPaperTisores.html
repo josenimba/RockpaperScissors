@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de piedra papel tijera</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/pedrapapertisores.js"></script>
+    <script>
+        //declaracion de variables globales
+        var partidas = 0, ganadas = 0, empates = 0, perdidas = 0;
+    </script>
+    
+</head>
+<body>
+    <h1>Juego de piedra papel tijera</h1>
+    <br><hr><br>
+    <div>
+        
+        <h2>Selecciona Tirada</h2>
+
+        
+
+        <section id="tiradas" class="flex-container">
+            <div class="contenedor">
+                <h3>Piedra</h3>    
+                <!-- <img src="images/piedra.png" alt="Piedra" onclick="tiradaJugador('piedra')" width="100px" height="100px"> -->
+                <img src="images/piedra.png" alt="Piedra" id="piedra" width="100px" height="100px">
+                
+            </div>
+            
+            <div class="contenedor">
+                <h3>Papel</h3>
+                <!-- <img src="images/papel.png" alt="Papel" onclick="tiradaJugador('papel')" width="100px" height="100px"> -->
+                <img src="images/papel.png" alt="Papel" id="papel" width="100px" height="100px">
+            </div>
+            <div class="contenedor">
+                <h3>Tijera</h3>
+                <!-- <img src="images/tijeras.png" alt="Tijeras" onclick="tiradaJugador('tijeras')" width="100px" height="100px"> -->
+                <img src="images/tijeras.png" alt="Tijeras" id="tijera" width="100px" height="100px">
+            </div>
+            
+        </section>
+
+        <br><hr><br>
+
+        <section id="juego" class="flex-container">
+            <div class="contenedor">
+                <h3>Jugador</h3>    
+                <img src="images/interrogante.png" alt="interrogante" width="200px" height="200px" id="tiradaPlayer">
+            </div>
+            <div class="contenedor">
+                <h3>Cpu</h3>    
+                <img src="images/interrogante.png" alt="interrogante" width="200px" height="200px" id="tiradaCpu">
+            </div><br>
+            
+        </section>
+        <output id="resultado"></output>
+        <br><hr><br>
+
+        <section class="contenedor">
+            <h2>Estadisticas</h2>
+            <ul>
+                <ol id="partida">Partidas: 0</ol>
+                <ol id="ganada">Ganadas: 0</ol>
+                <ol id="empate">Empates: 0</ol>
+                <ol id="perdida">Perdidas: 0</ol>
+            </ul>
+        </section>
+
+        <script>
+            piedra.onclick = function(){
+                shakeElement(tiradaPlayer, tiradaCpu, 'piedra')
+            } 
+            papel.onclick = function(){
+                shakeElement(tiradaPlayer, tiradaCpu, 'papel')
+            } 
+            tijera.onclick = function(){
+                shakeElement(tiradaPlayer, tiradaCpu, 'tijeras')
+            } 
+        </script>
+        
+
+
+
+    </div>
+</body>
+</html>
